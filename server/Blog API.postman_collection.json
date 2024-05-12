@@ -1,0 +1,731 @@
+{
+	"info": {
+		"_postman_id": "5bfac652-1d22-4850-9a6b-122d00dd1417",
+		"name": "Blog API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28902795"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jerry.ebikari.needam@gmail.com\",\n    \"password\": \"abcdef\",\n    \"firstName\": \"Ebikari\",\n    \"lastName\": \"Jerry\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5010/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5010",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"jerry.ebikari.needam2@gmail.com\",\n    \"password\": \"abcdef\",\n    \"firstName\": \"Ebikari\",\n    \"lastName\": \"Jerry\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5010/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5010",
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "394"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"18a-/LOdY5YlEFnN24GjA2rgtd9OdIc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 11:46:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"firstName\": \"Ebikari\",\n        \"lastName\": \"Jerry\",\n        \"email\": \"jerry.ebikari.needam2@gmail.com\",\n        \"_id\": \"6640ac0cdc103ff4d902d0d4\",\n        \"createdAt\": \"2024-05-12T11:46:20.734Z\",\n        \"updatedAt\": \"2024-05-12T11:46:20.734Z\",\n        \"__v\": 0\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDBhYzBjZGMxMDNmZjRkOTAyZDBkNCIsImlhdCI6MTcxNTUxNDM4MCwiZXhwIjoxNzE1NTE3OTgwfQ.4FZiq_fCjoqLktwmFnGjGKyW5Ui2uqRNYPhYruhYpek\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jerry.ebikari.needam@gmail1.com\",\n    \"password\": \"abcdef\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5010/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5010",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"jerry.ebikari.needam@gmail.com\",\n    \"password\": \"abcdef\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5010/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5010",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "393"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"189-9uIA/LGHniM4a1j3+Usci+R7J8I\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 11:42:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"_id\": \"66406d93a851539e73e4a90b\",\n        \"firstName\": \"Ebikari\",\n        \"lastName\": \"Jerry\",\n        \"email\": \"jerry.ebikari.needam@gmail.com\",\n        \"createdAt\": \"2024-05-12T07:19:47.056Z\",\n        \"updatedAt\": \"2024-05-12T07:19:47.056Z\",\n        \"__v\": 0\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDA2ZDkzYTg1MTUzOWU3M2U0YTkwYiIsImlhdCI6MTcxNTUxNDEyMiwiZXhwIjoxNzE1NTE3NzIyfQ.yLeW00arNN4B4n_XMomMWILL7i_9D6QQtETEl58c2d8\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Create Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Second Post\",\n    \"description\": \"This is the second post\",\n    \"body\": \"This is second.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5010/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5010",
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Second Post\",\n    \"description\": \"This is the second post\",\n    \"body\": \"This is second.\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5010/post",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5010",
+									"path": [
+										"post"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "299"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12b-ZLEdts73Z/m1nX92P0SzDJgnA3s\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 11:15:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"author\": \"66406d93a851539e73e4a90b\",\n    \"title\": \"Second Post\",\n    \"description\": \"This is the second post\",\n    \"readCount\": 0,\n    \"readingTime\": 1,\n    \"tags\": [],\n    \"body\": \"This is second.\",\n    \"state\": \"DRAFT\",\n    \"_id\": \"6640a4efabc3e29c443a8671\",\n    \"createdAt\": \"2024-05-12T11:15:59.517Z\",\n    \"updatedAt\": \"2024-05-12T11:15:59.517Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Post",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"author\": \"66406d93a851539e73e4a90b\",\n    \"title\": \"First Post\",\n    \"description\": \"This is the first post\",\n    \"readCount\": 0,\n    \"readingTime\": 2,\n    \"tags\": [\"tech\"],\n    \"body\": \"This is the very first post.\",\n    \"state\": \"DRAFT\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5010/post/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5010",
+							"path": [
+								"post",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "664072a66f0b3068869ca145"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"author\": \"66406d93a851539e73e4a90b\",\n    \"title\": \"First Post\",\n    \"description\": \"This is the first post\",\n    \"readCount\": 0,\n    \"readingTime\": 2,\n    \"tags\": [\"tech\"],\n    \"body\": \"This is the very first post.\",\n    \"state\": \"PUBLISHED\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5010/post/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5010",
+									"path": [
+										"post",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "664072a66f0b3068869ca145"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "496"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f0-ApUe2zPDP3Z1otW3m87HkWWB2yc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 10:46:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"664072a66f0b3068869ca145\",\n    \"author\": {\n        \"_id\": \"66406d93a851539e73e4a90b\",\n        \"firstName\": \"Ebikari\",\n        \"lastName\": \"Jerry\",\n        \"email\": \"jerry.ebikari.needam@gmail.com\",\n        \"createdAt\": \"2024-05-12T07:19:47.056Z\",\n        \"updatedAt\": \"2024-05-12T07:19:47.056Z\",\n        \"__v\": 0\n    },\n    \"title\": \"First Post\",\n    \"description\": \"This is the first post\",\n    \"readCount\": 0,\n    \"readingTime\": 2,\n    \"tags\": [\n        \"tech\"\n    ],\n    \"body\": \"This is the very first post.\",\n    \"state\": \"PUBLISHED\",\n    \"createdAt\": \"2024-05-12T07:41:26.743Z\",\n    \"updatedAt\": \"2024-05-12T10:46:05.492Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Search Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5010/post/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5010",
+							"path": [
+								"post",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5010/post/?title=firstn&tags=techs&author=jerr",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5010",
+									"path": [
+										"post",
+										""
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": "firstn"
+										},
+										{
+											"key": "tags",
+											"value": "techs"
+										},
+										{
+											"key": "author",
+											"value": "jerr"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "543"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21f-yeiqXuD/sONU2cmw7L17HxGGM7Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 13:17:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"_id\": \"664072a66f0b3068869ca145\",\n            \"author\": {\n                \"_id\": \"66406d93a851539e73e4a90b\",\n                \"firstName\": \"Ebikari\",\n                \"lastName\": \"Jerry\",\n                \"email\": \"jerry.ebikari.needam@gmail.com\",\n                \"createdAt\": \"2024-05-12T07:19:47.056Z\",\n                \"updatedAt\": \"2024-05-12T07:19:47.056Z\",\n                \"__v\": 0\n            },\n            \"title\": \"First Post\",\n            \"description\": \"This is the first post\",\n            \"readCount\": 16,\n            \"readingTime\": 2,\n            \"tags\": [\n                \"tech\"\n            ],\n            \"body\": \"This is the very first post.\",\n            \"state\": \"PUBLISHED\",\n            \"createdAt\": \"2024-05-12T07:41:26.743Z\",\n            \"updatedAt\": \"2024-05-12T11:41:38.232Z\",\n            \"__v\": 0\n        }\n    ],\n    \"page\": 1,\n    \"limit\": 20,\n    \"totalItems\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Search User Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5010/post/for/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5010",
+							"path": [
+								"post",
+								"for",
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5010/post/for/user?sortBy=createdAt",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5010",
+									"path": [
+										"post",
+										"for",
+										"user"
+									],
+									"query": [
+										{
+											"key": "state",
+											"value": "PUBLISHED",
+											"disabled": true
+										},
+										{
+											"key": "sortBy",
+											"value": "createdAt"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1018"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3fa-w8qGZqBPIhifUEgpmwPMsRHm5+s\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 11:23:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"_id\": \"6640a4efabc3e29c443a8671\",\n            \"author\": {\n                \"_id\": \"66406d93a851539e73e4a90b\",\n                \"firstName\": \"Ebikari\",\n                \"lastName\": \"Jerry\",\n                \"email\": \"jerry.ebikari.needam@gmail.com\",\n                \"createdAt\": \"2024-05-12T07:19:47.056Z\",\n                \"updatedAt\": \"2024-05-12T07:19:47.056Z\",\n                \"__v\": 0\n            },\n            \"title\": \"Second Post\",\n            \"description\": \"This is the second post\",\n            \"readCount\": 0,\n            \"readingTime\": 1,\n            \"tags\": [],\n            \"body\": \"This is second.\",\n            \"state\": \"DRAFT\",\n            \"createdAt\": \"2024-05-12T11:15:59.517Z\",\n            \"updatedAt\": \"2024-05-12T11:15:59.517Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"664072a66f0b3068869ca145\",\n            \"author\": {\n                \"_id\": \"66406d93a851539e73e4a90b\",\n                \"firstName\": \"Ebikari\",\n                \"lastName\": \"Jerry\",\n                \"email\": \"jerry.ebikari.needam@gmail.com\",\n                \"createdAt\": \"2024-05-12T07:19:47.056Z\",\n                \"updatedAt\": \"2024-05-12T07:19:47.056Z\",\n                \"__v\": 0\n            },\n            \"title\": \"First Post\",\n            \"description\": \"This is the first post\",\n            \"readCount\": 2,\n            \"readingTime\": 2,\n            \"tags\": [\n                \"tech\"\n            ],\n            \"body\": \"This is the very first post.\",\n            \"state\": \"PUBLISHED\",\n            \"createdAt\": \"2024-05-12T07:41:26.743Z\",\n            \"updatedAt\": \"2024-05-12T11:23:09.456Z\",\n            \"__v\": 0\n        }\n    ],\n    \"page\": 1,\n    \"limit\": 20,\n    \"totalItems\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5010/post/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5010",
+							"path": [
+								"post",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "664072a66f0b3068869ca145"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5010/post/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5010",
+									"path": [
+										"post",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6640a4efabc3e29c443a8671"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "475"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1db-cZkMqGDGHi7JYtcVLfh+V3f7NaM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 12 May 2024 11:42:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6640a4efabc3e29c443a8671\",\n    \"author\": {\n        \"_id\": \"66406d93a851539e73e4a90b\",\n        \"firstName\": \"Ebikari\",\n        \"lastName\": \"Jerry\",\n        \"email\": \"jerry.ebikari.needam@gmail.com\",\n        \"createdAt\": \"2024-05-12T07:19:47.056Z\",\n        \"updatedAt\": \"2024-05-12T07:19:47.056Z\",\n        \"__v\": 0\n    },\n    \"title\": \"Second Post\",\n    \"description\": \"This is the second post\",\n    \"readCount\": 0,\n    \"readingTime\": 1,\n    \"tags\": [],\n    \"body\": \"This is second.\",\n    \"state\": \"DRAFT\",\n    \"createdAt\": \"2024-05-12T11:15:59.517Z\",\n    \"updatedAt\": \"2024-05-12T11:15:59.517Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5010/post/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5010",
+							"path": [
+								"post",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "664072a66f0b3068869ca145"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NDA2ZDkzYTg1MTUzOWU3M2U0YTkwYiIsImlhdCI6MTcxNTUxNDEyMiwiZXhwIjoxNzE1NTE3NzIyfQ.yLeW00arNN4B4n_XMomMWILL7i_9D6QQtETEl58c2d8",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "{{baseUrl}}",
+			"value": "http://localhost:5010/",
+			"type": "string"
+		}
+	]
+}

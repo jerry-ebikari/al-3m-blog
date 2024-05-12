@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-const connectDB = async () => {
-  
+const connectToDatabase = async () => {
+  const mongoUri = process.env.NODE_ENV === 'production' ? process.env.MONGO_URI : process.env.MONGO_URI_TEST
   try {
     mongoose.set('strictQuery', false);
-    const conn = await mongoose.connect(process.env.MONGO_URI);
+    const conn = await mongoose.connect(mongoUri);
     console.log(`Database Connected`);
   } catch (error) {
     console.log(error);
@@ -11,4 +11,4 @@ const connectDB = async () => {
 
 }
 
-module.exports = connectDB;
+module.exports = connectToDatabase;
