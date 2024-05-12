@@ -2,7 +2,7 @@
 See /server/Blog API.postman_collection.json for API Documentation
 
 ### Entity Relationship Diagram
-![ERD](ERD.jpg)
+![ERD](/ERD.jpg)
 
 ## Install dependencies
 - npm install
