@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"jerry.ebikari.needam@gmail.com\",\n    \"password\": \"abcdef\",\n    \"firstName\": \"Ebikari\",\n    \"lastName\": \"Jerry\"\n}",
+							"raw": "{\n    \"email\": \"jerryebikarineedam@gmail.com\",\n    \"password\": \"abc\",\n    \"firstName\": \"Ebikari\",\n    \"lastName\": \"Jerry\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -24,12 +24,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5010/auth/register",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/auth/register",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5010",
 							"path": [
 								"auth",
 								"register"
@@ -109,7 +107,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"jerry.ebikari.needam@gmail1.com\",\n    \"password\": \"abcdef\"\n}",
+							"raw": "{\n    \"email\": \"jerry.ebikari.needam@gmail.com\",\n    \"password\": \"abcdef\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -117,12 +115,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5010/auth/login",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/auth/login",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5010",
 							"path": [
 								"auth",
 								"login"
@@ -215,12 +211,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5010/post",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/post",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5010",
 							"path": [
 								"post"
 							]
@@ -298,7 +292,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"author\": \"66406d93a851539e73e4a90b\",\n    \"title\": \"First Post\",\n    \"description\": \"This is the first post\",\n    \"readCount\": 0,\n    \"readingTime\": 2,\n    \"tags\": [\"tech\"],\n    \"body\": \"This is the very first post.\",\n    \"state\": \"DRAFT\"\n}",
+							"raw": "{\n    \"author\": \"66406d93a851539e73e4a90b\",\n    \"title\": \"First Post\",\n    \"description\": \"This is the first post\",\n    \"readCount\": 0,\n    \"readingTime\": 2,\n    \"tags\": [\"tech\"],\n    \"body\": \"This is the very first post.\",\n    \"state\": \"PUBLISHED\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -306,12 +300,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5010/post/:id",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/post/:id",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5010",
 							"path": [
 								"post",
 								":id"
@@ -402,15 +394,27 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5010/post/",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/post/?title=firstn&tags=techs&author=jerr",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5010",
 							"path": [
 								"post",
 								""
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "firstn"
+								},
+								{
+									"key": "tags",
+									"value": "techs"
+								},
+								{
+									"key": "author",
+									"value": "jerr"
+								}
 							]
 						}
 					},
@@ -491,16 +495,25 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5010/post/for/user",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/post/for/user?sortBy=createdAt",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5010",
 							"path": [
 								"post",
 								"for",
 								"user"
+							],
+							"query": [
+								{
+									"key": "state",
+									"value": "PUBLISHED",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "createdAt"
+								}
 							]
 						}
 					},
@@ -579,12 +592,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5010/post/:id",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/post/:id",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5010",
 							"path": [
 								"post",
 								":id"
@@ -592,7 +603,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "664072a66f0b3068869ca145"
+									"value": "6640a4efabc3e29c443a8671"
 								}
 							]
 						}
@@ -666,12 +677,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5010/post/:id",
-							"protocol": "http",
+							"raw": "{{baseUrl}}/post/:id",
 							"host": [
-								"localhost"
+								"{{baseUrl}}"
 							],
-							"port": "5010",
 							"path": [
 								"post",
 								":id"
@@ -723,8 +732,8 @@
 	],
 	"variable": [
 		{
-			"key": "{{baseUrl}}",
-			"value": "http://localhost:5010/",
+			"key": "baseUrl",
+			"value": "https://al-3m-blog.onrender.com",
 			"type": "string"
 		}
 	]
